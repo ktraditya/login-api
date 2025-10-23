@@ -1,0 +1,365 @@
+# Java
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Spring Boot
+.springBeans
+.sts4-cache
+.factorypath
+.apt_generated/
+.apt_generated_tests/
+spring-shell.log
+
+# IDE Files
+## IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+## Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+## NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+## Visual Studio Code
+.vscode/
+
+# Test directories
+src/test/
+src/tst/
+**/tst/
+test-output/
+test-results/
+.coverage/
+
+# Documentation files - ignore all markdown files except README.md
+*.md
+!README.md
+*.txt
+*.pdf
+*.doc
+*.docx
+
+# Additional documentation directories
+docs/
+documentation/
+guides/
+
+# Log files
+*.log
+logs/
+log/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node.js (if you have any frontend components)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment and configuration files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+application-local.properties
+application-dev.properties
+application-secret.properties
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+h2/
+
+# Security and credentials
+*.key
+*.pem
+*.p12
+*.jks
+keystore.*
+
+# Build and distribution
+dist/
+build/
+out/
+*.tgz
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Application specific
+# Add your application specific files here
+config/local/
+certificates/
+secrets/
+
+# Common project files to ignore
+*.orig
+*.patch
+*.diff
+*.rej
+*.conflict
+
+# Project-specific directories
+uploads/
+downloads/
+exports/
+imports/
+reports/
+data/
+
+# Configuration files with sensitive data
+*.properties.local
+*.yml.local
+*.yaml.local
+config/local.properties
+config/dev.properties
+config/prod.properties
+
+# Shell and batch scripts (if generated)
+run.sh
+start.sh
+stop.sh
+deploy.sh
+*.exe.config
+
+# Testing frameworks
+.nyc_output/
+coverage/
+*.lcov
+
+# Generated documentation
+site/
+docs/_build/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Cache directories
+.cache/
+.sass-cache/
+.pytest_cache/
+
+# Package files
+*.deb
+*.rpm
+
+# Python (in case you have any Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ruby (in case you have any Ruby scripts)
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes
+*.kubeconfig
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# AWS
+.aws/
+
+# Local development
+local/
+dev/
+development/
+
+# Application-specific generated files
+*.pid
+*.seed
+*.pid.lock
+application*.log*
+
+# JaCoCo coverage reports
+jacoco.exec
+jacoco-it.exec
+site/jacoco/
+
+# Surefire reports
+surefire-reports/
+
+# Build scripts output
+build-output/
+scripts/output/
+
+# Maven wrapper (uncomment if you want to ignore)
+# .mvn/
+# mvnw
+# mvnw.cmd
+
+# Gradle wrapper (uncomment if you want to ignore)
+# gradlew
+# gradlew.bat
+# gradle/
+
+# IDE-specific project files
+*.swp
+*.swo
+*~
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Compiled source
+*.com
+*.exe
+*.o
+*.so
+
+# Packages
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs
+*.log
+
+# Databases
+*.sql
+*.sqlite
+
+# Microsoft Office
+~$*
+*.tmp
