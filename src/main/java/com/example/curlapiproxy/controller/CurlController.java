@@ -66,8 +66,10 @@ public class CurlController {
         String baseUrl = getBaseUrlForEnvironment(apiRequest.getEnv());
         String url = baseUrl + "/api/data/" + apiRequest.getSmid();
         
-        // Build curl command parameters
-        String parameters = "-X GET -H 'Content-Type: application/json' -H 'Accept: application/json'";
+        // Build curl command parameters with CSRF header and POST data
+        String parameters = String.format("-X POST -H 'CSRF: DFSDKJFHDKJFHDSKJFHFOREUEOWIFNVHFDSGORO' -H 'Content-Type: application/json' " +
+                                         "--data-raw '{\"clientNumber\":\"%s\",\"callmode\":\"01\"}'", 
+                                         apiRequest.getSmid());
         
         logger.info("Built curl request - URL: {}, Params: {}", url, parameters);
         return new CurlRequest(url, parameters);

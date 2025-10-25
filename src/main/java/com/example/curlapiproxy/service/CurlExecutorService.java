@@ -87,7 +87,7 @@ public class CurlExecutorService {
         
         // Add parameters if provided
         if (request.getParameters() != null && !request.getParameters().trim().isEmpty()) {
-            String[] params = request.getParameters().trim().split("\\s+");
+            List<String> params = parseQuotedParameters(request.getParameters().trim());
             for (String param : params) {
                 // Basic sanitization - remove potentially dangerous characters
                 if (isValidParameter(param)) {
@@ -100,6 +100,44 @@ public class CurlExecutorService {
         command.add(request.getUrl());
         
         return command;
+    }
+    
+    private List<String> parseQuotedParameters(String paramString) {
+        List<String> params = new ArrayList<>();
+        StringBuilder current = new StringBuilder();
+        boolean inQuotes = false;
+        char quoteChar = 0;
+        
+        for (int i = 0; i < paramString.length(); i++) {
+            char c = paramString.charAt(i);
+            
+            if (!inQuotes && (c == '\'' || c == '"')) {
+                // Start of quoted string
+                inQuotes = true;
+                quoteChar = c;
+                current.append(c);
+            } else if (inQuotes && c == quoteChar) {
+                // End of quoted string
+                inQuotes = false;
+                current.append(c);
+            } else if (!inQuotes && Character.isWhitespace(c)) {
+                // Space outside quotes - end current parameter
+                if (current.length() > 0) {
+                    params.add(current.toString());
+                    current.setLength(0);
+                }
+            } else {
+                // Regular character or space inside quotes
+                current.append(c);
+            }
+        }
+        
+        // Add final parameter if any
+        if (current.length() > 0) {
+            params.add(current.toString());
+        }
+        
+        return params;
     }
     
     private boolean isValidParameter(String param) {
